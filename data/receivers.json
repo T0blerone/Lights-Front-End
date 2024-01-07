@@ -1,0 +1,18 @@
+{
+  "receivers": [
+    {
+      "name": "Snare 1",
+      "receiver_id": "127",
+      "group": "Pit",
+      "leds": "35",
+      "id": 1
+    },
+    {
+      "name": "Snare 2",
+      "receiver_id": "32",
+      "group": "Pit",
+      "leds": "34",
+      "id": 2
+    }
+  ]
+}
