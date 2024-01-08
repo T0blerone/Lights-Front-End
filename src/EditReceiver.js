@@ -1,11 +1,20 @@
-const EditReceiver = (Receiver) => {
-    const [name, setName] = useState('');
+import {useNavigate} from 'react-router-dom';
+import { useState } from 'react';
+import useFetch from './useFetch';
+
+
+const EditReceiver = () => {
+    const{data: receiver, dataIsPending, error} = useFetch('http://localhost:8000/receivers/');
+    const [name, setName] = useState();
     const [receiver_id, setid] = useState();
     const [group, setGroup] = useState('');
     const [leds, setleds] = useState();
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
-    
+
+    const handleSubmit = () => {
+
+    }
     
     return ( 
         <div className="edit-receiver-menu">

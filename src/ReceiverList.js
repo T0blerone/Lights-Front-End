@@ -11,7 +11,7 @@ const ReceiverList = ({receivers}) => {
                 </Link>
             </div>
             {receivers.map((receiver) => (
-                <Link to={`/receiver/${receiver.receiver_id}`} >
+                <Link to={`/edit-receiver/${receiver.id}`} >
                     <div className="receiver-info">
                         <h2>{receiver.name}</h2>
                         <p>ID: {receiver.receiver_id}</p>
