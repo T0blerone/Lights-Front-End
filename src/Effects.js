@@ -1,6 +1,6 @@
 const Effects = () => {
     return (  
-        <h1></h1>
+        <h1>f</h1>
     );
 }
  
