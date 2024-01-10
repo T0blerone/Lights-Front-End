@@ -4,7 +4,7 @@ import { useState } from 'react';
 const AddReceiver = () => {
     const [name, setName] = useState('');
     const [receiver_id, setid] = useState();
-    const [group, setGroup] = useState('');
+    const [group, setGroup] = useState('Drumline');
     const [leds, setleds] = useState();
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();

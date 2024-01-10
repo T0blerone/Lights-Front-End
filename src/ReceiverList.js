@@ -11,14 +11,14 @@ const ReceiverList = ({receivers}) => {
                 </Link>
             </div>
             {receivers.map((receiver) => (
-                <Link to={`/edit-receiver/${receiver.id}`} >
-                    <div className="receiver-info">
+                <div className="receiver-info">
+                    <Link to={`/edit-receiver/${receiver.id}`} >
                         <h2>{receiver.name}</h2>
                         <p>ID: {receiver.receiver_id}</p>
                         <p>Group: {receiver.group}</p>
                         <p>LED Count: {receiver.leds}</p>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
             ))}
         </div>
     );

@@ -19,7 +19,7 @@ function App() {
           <Route path ='effects/*' element={<Effects />} />
           <Route path ='clips/*' element={<Clips />} />
           <Route path ='add-receiver/*' element={<AddReceiver />} />
-          <Route path ='edit-receiver/*' element={<EditReceiver />} />
+          <Route path ='edit-receiver/:id' element={<EditReceiver />} />
         </Routes>
       </div>
     </div>

@@ -29,7 +29,7 @@ const useFetch = (path) => {
             })
 
         return () => abortCont.abort();
-      }, [path]);
+    }, [path]);
 
     return {data, isPending, error};
 }
