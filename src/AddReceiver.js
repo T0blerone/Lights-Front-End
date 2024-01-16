@@ -1,18 +1,32 @@
 import {useNavigate} from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const AddReceiver = () => {
+const AddReceiver = ({receivers}) => {
     const [name, setName] = useState('');
     const [receiver_id, setid] = useState();
     const [group, setGroup] = useState('Drumline');
     const [leds, setleds] = useState();
     const [isPending, setIsPending] = useState(false);
+    const [isUnique, setIsUnique]= useState(true);
     const navigate = useNavigate();
+
+    const duplicateCheck = (current_receiver_id) => {
+        for(var i = 0; i < receivers.length; i++){
+            if(receivers[i].receiver_id == current_receiver_id){
+                setIsUnique(false);
+                setid(current_receiver_id);
+                break;
+            }
+            else{
+                setIsUnique(true);
+                setid(current_receiver_id);
+            }
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const receiver = {name, receiver_id, group, leds};
-
         setIsPending(true);
 
         fetch('http://localhost:8000/receivers', {
@@ -20,7 +34,6 @@ const AddReceiver = () => {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(receiver)
         }).then(() => {
-            console.log(receiver);
             setIsPending(false);
             navigate('/receivers');
         })
@@ -40,7 +53,7 @@ const AddReceiver = () => {
                 placeholder='Receiver ID'
                 required 
                 value = {receiver_id}
-                onChange={(e)=> setid(e.target.value)}
+                onChange={(e)=> duplicateCheck(e.target.value)}
                 /><br />
                 <input type="number"
                 placeholder='Receiver LEDs'
@@ -53,8 +66,8 @@ const AddReceiver = () => {
                     <option value="Drumline">Drumline</option>
                     <option value="Pit">Pit</option>
                 </select><br />
-
-                {!isPending && <button>Add Receiver</button>}
+                {!isUnique && <button disabled>Change Duplicate ID</button>}
+                {!isPending && isUnique && <button>Add Receiver</button>}
                 {isPending && <button disabled>Adding receiver...</button>}
             </form>
         </div>

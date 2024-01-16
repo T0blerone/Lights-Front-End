@@ -1,4 +1,3 @@
-import AddReceiver from "./AddReceiver";
 import {Link} from 'react-router-dom';
 
 const ReceiverList = ({receivers}) => {
@@ -7,16 +6,14 @@ const ReceiverList = ({receivers}) => {
             <h2>Receivers</h2>
             <div className="add-receiver">
                 <Link to='/add-receiver'> 
-                <button onClick={AddReceiver()}>Add Receiver</button>
+                <button>Add Receiver</button> 
                 </Link>
             </div>
             {receivers.map((receiver) => (
                 <div className="receiver-info">
                     <Link to={`/edit-receiver/${receiver.id}`} >
                         <h2>{receiver.name}</h2>
-                        <p>ID: {receiver.receiver_id}</p>
-                        <p>Group: {receiver.group}</p>
-                        <p>LED Count: {receiver.leds}</p>
+                        <p>ID: {receiver.receiver_id} | Group: {receiver.group} | LED Count: {receiver.leds}</p>
                     </Link>
                 </div>
             ))}

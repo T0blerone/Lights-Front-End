@@ -1,2 +1,9 @@
 
 - Add confirmation to delete buttons
+- Add duplicate detection for receiver id
+- 
+
+EFFECTS
+- create "current show" drop down, that adds/selects the db json array to use
+- check lights code from last year for what parameters to store
+- Don't allow two to be bound to one button

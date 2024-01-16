@@ -6,6 +6,7 @@ import Home from './Home';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import AddReceiver from './AddReceiver';
 import EditReceiver from './EditReceiver';
+import AddReceiverLoading from './AddReceiverLoading';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path ='receivers/*' element={<Receivers />} />
           <Route path ='effects/*' element={<Effects />} />
           <Route path ='clips/*' element={<Clips />} />
-          <Route path ='add-receiver/*' element={<AddReceiver />} />
+          <Route path ='add-receiver/*' element={<AddReceiverLoading />} />
           <Route path ='edit-receiver/:id' element={<EditReceiver />} />
         </Routes>
       </div>

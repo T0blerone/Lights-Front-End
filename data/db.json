@@ -1,0 +1,46 @@
+{
+  "receivers": [
+    {
+      "id": "fa31",
+      "name": "Test 1",
+      "receiver_id": "1",
+      "group": "Drumline",
+      "leds": "13"
+    },
+    {
+      "id": "0545",
+      "name": "Test 2",
+      "receiver_id": "2",
+      "group": "Drumline",
+      "leds": "12"
+    },
+    {
+      "id": "6f12",
+      "name": "test 3",
+      "receiver_id": "3",
+      "group": "Drumline",
+      "leds": "23"
+    },
+    {
+      "id": "2ef5",
+      "name": "test 4",
+      "receiver_id": "4",
+      "group": "Drumline",
+      "leds": "4"
+    },
+    {
+      "id": "e678",
+      "name": "test 5",
+      "receiver_id": "45",
+      "group": "Drumline",
+      "leds": "5"
+    },
+    {
+      "id": "dcc2",
+      "name": "test 6",
+      "receiver_id": "5",
+      "group": "Drumline",
+      "leds": "234"
+    }
+  ]
+}

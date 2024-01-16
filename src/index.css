@@ -38,7 +38,7 @@
 
 /* Receivers tab*/
 .receiver-list{
-  margin-left: 45vw;
+  margin-left: 0px;
   padding: 10px;
 }
 .add-receiver {
@@ -57,21 +57,23 @@
   background: #c372ff;
 }
 .receiver-info{
-  background-color:#868686;
+  border:1px solid black;
   padding: 10px;
-  margin-top: 20px;
-  width: 20vw;
-  align-items: center;
-  text-align: center;
-  border-radius: 40px;
-  transform:translate(-35%, 0%);
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 30vw;
+  align-items: left;
+  text-align: left;
 }
 .receiver-info h2 {
-  color: #fff;
+  color: #868686;
+}
+a:link{
+  text-decoration: none!important;
 }
 .receiver-info p {
   margin-left: 6px;
-  color: #fff;
+  color: #868686;
 }
 
 /*Add Receiver Page*/
